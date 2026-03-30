@@ -1,0 +1,541 @@
+/* Reeves Enterprises Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f4aa1 0%, #1f6dd1 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+#dashboardScreen {
+    background: #2f3238;
+    min-height: 100vh;
+    color: #f1f1f1;
+}
+
+#dashboardScreen h1,
+#dashboardScreen h2,
+#dashboardScreen h3,
+#dashboardScreen h4,
+#dashboardScreen h5,
+#dashboardScreen h6 {
+    color: #ffffff;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Login Screen */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), url('https://www.vecteezy.com/photo/19892358-businessman-analyzing-company-growth-future-business-growth-arrow-graph-development-to-achieve-goals-business-outlook-financial-data-for-long-term-investment');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: lighten;
+}
+
+.login-container h1 {
+    color:purple;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+#loginForm {
+    background:pink;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 300px;
+}
+
+#loginForm input, #loginForm select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.15);
+    color: #0d2d52;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 12px;
+    background: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#loginForm button:hover {
+    background: #d35400;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.forgot-password a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#logoutBtn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Navigation */
+.main-nav {
+    background: #34495e;
+    padding: 0;
+    display: flex;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    background: #3498db;
+    color: white;
+}
+
+/* Main Content */
+#mainContent {
+    padding: 2rem;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.metric {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.metric.alert {
+    color: #e74c3c;
+}
+
+.alerts-section {
+    background: rgba(255,255,255,0.08);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
+/* Section Headers */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    color: #0d2d52;
+}
+
+.btn-primary {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background: #3498db;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filters input, .filters select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: rgba(255,255,255,0.12);
+    font-weight: 600;
+    color: #e9f3ff;
+}
+
+tr:hover {
+    background: rgba(255, 192, 203, 0.35);
+}
+
+tr.selected, tr.selected td {
+    background: rgba(255, 255, 255, 0.9);
+    color: #0d2d52;
+}
+
+.status-ok {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.status-low {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.status-critical {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+/* Transaction Form */
+.transaction-form {
+    background: rgba(255,255,255,0.08);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    margin-bottom: 1rem;
+}
+
+.transaction-form input, .transaction-form select, .transaction-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 4px;
+    background: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+    background: #f39c12;
+    color: white;
+}
+
+.form-actions button[type="button"] {
+    background: #f39c12;
+    color: white;
+}
+
+/* Reports */
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.report-card {
+    background: rgba(255,255,255,0.08);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.report-card button {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.report-card button:hover,
+.report-card button:focus,
+.report-card button:active {
+    background: #3498db;
+}
+
+#reportOutput {
+    background: rgba(255,255,255,0.06);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    min-height: 200px;
+}
+
+/* Settings */
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.setting-group {
+    background: rgba(255,255,255,0.08);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
+.setting-group button {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.setting-group button:hover,
+.setting-group button:focus,
+.setting-group button:active {
+    background: #3498db;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: rgba(255,255,255,0.1);
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: #000;
+}
+
+#productForm input, #productForm select, #forgotPasswordForm input, #forgotPasswordForm select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 4px;
+    background: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+#resetResult {
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#resetResult.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#resetResult.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.edit-btn {
+    background: #f39c12;
+    color: white;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Alerts */
+.alert {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border-left: 4px solid;
+}
+
+.alert-info {
+    background: rgba(173, 216, 230, 0.35);
+    border-color: #4a90e2;
+    color: #0d2d52;
+}
+
+.alert-warning {
+    background: rgba(255, 182, 193, 0.35);
+    border-color: #ff6fb3;
+    color: #641a44;
+}
+
+.alert-critical {
+    background: rgba(255, 105, 180, 0.25);
+    border-color: #ff2d95;
+    color: #4a0438;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-nav {
+        flex-direction: column;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+}
