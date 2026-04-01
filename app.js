@@ -113,6 +113,7 @@ function loginUser(event) {
     const usernameValue = document.getElementById('username').value.trim().toLowerCase();
     const passwordValue = document.getElementById('password').value;
     const locationValue = document.getElementById('location').value;
+    if (passwordValue !== 'mash001!') { alert('Wrong password.'); return; }
     const user = { fullName: usernameValue };
 
     
