@@ -118,7 +118,7 @@ function loginUser(event) {
     const user = users.find(u => u.username.toLowerCase() === usernameValue && u.password === passwordValue);
 
     if (!user) {
-        alert('Invalid credentials. Use username "john mash" and password "mash001!".');
+        alert('Incorrect credentials.');
         return;
     }
     if (!locationValue) {
