@@ -1,8 +1,6 @@
 "use strict";
 
-const users = [
-    { username: 'john mash', password: 'mash001!', fullName: 'John Mash' }
-];
+const users = [];
 
 const branchLabels = {
     eldoret: 'Reeves Branch Eldoret',
@@ -115,12 +113,9 @@ function loginUser(event) {
     const usernameValue = document.getElementById('username').value.trim().toLowerCase();
     const passwordValue = document.getElementById('password').value;
     const locationValue = document.getElementById('location').value;
-    const user = users.find(u => u.username.toLowerCase() === usernameValue && u.password === passwordValue);
+    const user = { fullName: usernameValue };
 
-    if (!user) {
-        alert('Incorrect credentials.');
-        return;
-    }
+    
     if (!locationValue) {
         alert('Please select a Reeves branch.');
         return;
@@ -268,3 +263,4 @@ window.addEventListener('DOMContentLoaded', () => {
     renderTransactionsTable();
     updateDashboardMetrics();
 });
+
